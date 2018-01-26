@@ -1,0 +1,23 @@
+@mixin border-radius($radius){
+	border-radius: $radius;
+}
+@mixin flex-middle(){
+	display: flex;
+	align-items: center;
+
+}
+@mixin shadow($positionX, $positionY, $size, $color){
+	box-shadow : $positionX $positionY 4px 0px $color;
+}
+@mixin ellipsis(){
+	text-overflow: ellipsis;  
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,115 @@
+.main-sidebar{
+	background: $white;
+	width: $sidebarwidth;
+	height: 100%;
+	float: left;
+	&-nav-inner{
+		padding: 15px 0;
+		& > li.active{
+			background: $grey-border;
+		}
+		li{
+			border-bottom: 1px solid $grey-border;
+			position: relative;
+			&:hover{
+				background: $grey-border;
+				transition: all 300ms linear;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+			a{
+				text-decoration: none;
+				color: $headertextcolor;
+				padding: 15px;
+				font-size: 14px;
+				display: block;
+				span{
+					margin-right: 10px;
+					display: inline-block;
+					font-size: 18px;
+
+				}
+								
+			}
+			&.has-child{
+				&:after{
+					color: $headertextcolor;
+					font-family: FontAwesome;
+					content: "\f104";
+					position: absolute;
+					top: 0;
+					right: 20px;
+					transform: translateY(100%);
+				    transition: transform .5s ease
+				}
+				&.active{
+					& > .has-sub{
+						color: $primaryColor;
+						font-weight: 500;
+					}
+					&:after{
+						top: 0;
+						right: 20px;							
+						transform: translateY(100%) rotate(-90deg);
+						color: $primaryColor;
+					}
+					.icons{
+						color: $primaryColor;
+					}
+				}
+			}
+			& ul{
+				&.first-level{
+					background: lighten($primaryColor, 45%);
+				}
+				&.second-level{
+					background: lighten($primaryColor, 50%);
+					li{
+						a{
+							padding-left: ($item-padding-M + 40px);
+						}
+					}
+				}
+				&.third-level{
+					background: lighten($primaryColor, 70%);
+				}
+				opacity: 0;
+				max-height: 0;
+				width: 100%;
+				
+				transition: all 300ms linear;
+				&.show{
+					opacity: 1;
+					max-height: 100%;
+					& > li{
+						transition: all 300ms linear;
+					}				}
+				li{
+					transition: all 300ms linear;
+					a{
+						display: block;
+						padding-left: $item-padding-M + 20px;
+					}
+				}
+
+			}
+		}
+	}
+	&-title-area{
+			text-align: center;
+			background: $primaryColor;
+			height: 50px;
+			@include flex-middle();
+			&-title{
+				font-size: 22px;
+				color: $white;
+				font-weight: normal;
+				width: 100%;
+				text-align: center;
+
+			}
+		}
+
+
+}

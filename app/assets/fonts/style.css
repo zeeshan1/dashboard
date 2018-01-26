@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?e00beg');
+  src:  url('fonts/icomoon.eot?e00beg#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?e00beg') format('truetype'),
+    url('fonts/icomoon.woff?e00beg') format('woff'),
+    url('fonts/icomoon.svg?e00beg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-assembly:before {
+  content: "\e901";
+}
+.icon-bank-account:before {
+  content: "\e902";
+}
+.icon-bulk-operations:before {
+  content: "\e903";
+}
+.icon-catalog:before {
+  content: "\e904";
+}
+.icon-content-management:before {
+  content: "\e905";
+}
+.icon-coupon-management:before {
+  content: "\e906";
+}
+.icon-credit:before {
+  content: "\e907";
+}
+.icon-credit-management:before {
+  content: "\e908";
+}
+.icon-general:before {
+  content: "\e909";
+}
+.icon-hot-link:before {
+  content: "\e90a";
+}
+.icon-intercompany:before {
+  content: "\e90b";
+}
+.icon-inter-company:before {
+  content: "\e90c";
+}
+.icon-items:before {
+  content: "\e90d";
+}
+.icon-iventory-adjustment:before {
+  content: "\e90e";
+}
+.icon-journal:before {
+  content: "\e90f";
+}
+.icon-manage-place-holders:before {
+  content: "\e910";
+}
+.icon-marketing:before {
+  content: "\e911";
+}
+.icon-payment-terms:before {
+  content: "\e912";
+}
+.icon-pending-approvals:before {
+  content: "\e913";
+}
+.icon-period-locking:before {
+  content: "\e914";
+}
+.icon-preferences:before {
+  content: "\e915";
+}
+.icon-product-price:before {
+  content: "\e916";
+}
+.icon-product-visibility:before {
+  content: "\e917";
+}
+.icon-promotion:before {
+  content: "\e918";
+}
+.icon-purchase:before {
+  content: "\e919";
+}
+.icon-qick-link:before {
+  content: "\e91a";
+}
+.icon-receivables:before {
+  content: "\e91b";
+}
+.icon-report:before {
+  content: "\e91c";
+}
+.icon-reports:before {
+  content: "\e91d";
+}
+.icon-return-authorization:before {
+  content: "\e91e";
+}
+.icon-setup:before {
+  content: "\e91f";
+}
+.icon-store-configuration:before {
+  content: "\e920";
+}
+.icon-subsidiaries:before {
+  content: "\e921";
+}
+.icon-temlates:before {
+  content: "\e922";
+}
+.icon-theme-management:before {
+  content: "\e923";
+}
+.icon-transfers:before {
+  content: "\e924";
+}
+.icon-transfrer-order:before {
+  content: "\e925";
+}
+.icon-vendors:before {
+  content: "\e900";
+}
+.icon-wherehouse:before {
+  content: "\e926";
+}

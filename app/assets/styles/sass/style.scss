@@ -1,0 +1,53 @@
+@import "module/_mediaquiries";
+@import "module/_variables";
+@import "module/_mixins";
+@import "module/_header";
+@import "module/_sprite";
+@import "module/_mediaquiries";
+@import "module/_footer";
+@import "module/_dropdown";
+@import "module/_sidebar";
+@import "module/_content-area";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900");
+
+
+
+
+// preloading styling
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	color: $headertextcolor;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1,h2,h3{
+    color: $headertextcolor
+}
+ul, li, ol{
+	list-style: none;
+}
+
+.hide{
+		display: none !important;
+	}

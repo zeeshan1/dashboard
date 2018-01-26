@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/styles/css/style.css">
+    <link rel="stylesheet" href="/assets/styles/thirdparty-styling/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="/assets/fonts/style.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-logo-section">
+        	<a href="#">
+        		
+            <span class="icon icon--gklogo"></span>
+        	</a>
+        </div>
+        <div class="main-header-nav-section">
+            <div class="dropdown dropdown-flags  " id="dropdown-countries" >
+                <a class="dropdown-label"  href="#">
+                    <span class="icon icon--ae"></span>
+                    <div class="dropdown-label-title"> Van Tibolli DWC - LLC
+                    </div>
+                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                <div class="dropdown-outer hide">
+                    <ul class="dropdown-arrow_box dropdown-flags " id="dropdown">
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--au"></span> Van Tibooli Beauty PTY Australia</a> </li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--ie"></span>Van Tibolli LTD Ireland</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--it"></span>SVan Tibooli Beauty SRL Italy</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--pr"></span>Tibolli LLC</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown icon-size " id="dropdownForQuickLinks">
+                <a class="dropdown-label" href="#">
+                    <span class="icon-qick-link icons"></span>
+                </a>
+                <div class="dropdown-outer hide " >
+                    <ul class=" dropdown-arrow_box quick-link-dropdown">
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--admin"></span>Setting</a>
+						 </li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--banking"></span>Profile</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--inventory"></span>Sign Out</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--sales"></span>Sign Out</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--purchase"></span>Sign Out</a></li>
+                        <li class="dropdown-data"><a href="#"><span class="icon icon--sales"></span>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown " id="dropdownForSetting">
+                <a class="dropdown-label" href="#">
+                    <span class="dropdown-label-avatar"> <i class="fa fa-user-o" aria-hidden="true"></i></span>
+                    <div class="dropdown-label-title">Developer Logged-in</div>
+                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                </a>
+                <div class="dropdown-outer hide">
+                    <ul class="dropdown-arrow_box " id="dropdown">
+                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-cog" aria-hidden="true"></i></span>Setting</a> </li>
+                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>Profile</a></li>
+                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Sign Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+	
+	<section class="content-wrapper">
+		<aside class="main-sidebar">
+			<div class="main-sidebar-title-area">
+				<h2 class="main-sidebar-title-area-title">					
+				Inventory Section
+				</h2>
+			</div>
+		<nav class="main-sidebar-nav-outer">
+			<ul class="main-sidebar-nav-inner">
+				<li class="has-child" id="first">
+					<a href="#" class="has-sub" ><span class=" icons icon-items "></span>First level Element</a>
+					<ul class="first-level">
+						<li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
+							<ul class="second-level">
+								<li >
+									<a href="#">Third Level Element</a>
+										
+								</li>
+								<li><a href="#">child is here</a></li>
+								<li><a href="#">you are child</a></li>
+							</ul>
+
+						</li>
+						<li><a href="#">child is here</a></li>
+						<li><a href="#">you are child</a></li>
+					</ul>
+
+
+				</li>
+				<li><a href="#"><span class=" icons icon-wherehouse"></span>This is testing</a></li>
+				<li><a href="#"><span class=" icons icon-transfrer-order"></span>This is testing</a></li>
+				<li><a href="#"><span class=" icons icon-iventory-adjustment"></span>This is testing</a></li>
+				<li class="has-child"><a href="#" class="has-sub"><span class=" icons icon-purchase"></span>This is testing</a>
+
+					<ul class="first-level">
+						<li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
+							<ul class="second-level">
+								<li >
+									<a href="#">Third Level Element</a>
+										
+								</li>
+								<li><a href="#">child is here</a></li>
+								<li><a href="#">you are child</a></li>
+							</ul>
+
+						</li>
+						<li><a href="#">child is here</a></li>
+						<li><a href="#">you are child</a></li>
+					</ul>
+
+
+
+
+
+				</li>
+				<li><a href="#"><span class=" icons icon-setup"></span>This is testing</a></li>
+			</ul>
+		</nav>
+	</aside>
+	<section class="content-area">
+		
+		<div class="content-header">
+			<span id="sidebartoggler" class="content-header-toggler">
+				<i class="fa fa-outdent" aria-hidden="true"></i>
+			</span>
+			<h3 class="content-header-title">
+				Dashboard
+			</h3>
+		</div>
+
+	</section>
+	</section>
+	
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/custom.js">
+    </script>
+</body>
+
+</html>
