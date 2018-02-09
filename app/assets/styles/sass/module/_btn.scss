@@ -1,0 +1,22 @@
+/*please write the style as per buttons states - default - hover - focus - disabled*/
+/*zeeshan*/
+
+.btn{
+	min-width: 80px;
+	@include border-radius(4px);
+	background: $defaultcolor;
+	font-size: 14px;
+	text-align: center;
+	color: $textcolor;
+	border: none;
+	cursor: pointer;
+	transition: all 400ms linear;
+	&-default{
+		padding: 8px 20px;
+		&:hover{
+			background: $primaryColor;
+			color: $white;
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+.profile{
+	&:after{
+		border-bottom-color: $secondaryBlue !important;
+	}
+	&-section{
+	width: 240px;
+	&-avatar{
+		background: $secondaryBlue;
+		text-align: center;
+		padding: 15px 40px;
+		&-name{
+			font-size: 16px; 
+			color: $white;
+			margin-top: 10px;
+		}
+	}
+	&-nav{
+		padding:15px 20px;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		li{
+			width: 50%;				
+			border: 1px solid $white;
+			transition: all 350ms linear;
+			&:hover{
+					border: 1px solid $darkborder;					
+					transition: all 350ms linear;
+				}
+			a{
+				text-decoration: none;
+				font-size: 14px;
+				color: $headertextcolor;
+				display: block;
+				padding: 10px;				
+				p{
+					margin-top: 6px;
+				}
+
+			}
+		}
+	}
+	&-signout{
+		width: 100%;
+		text-align: center;
+		background: $grey-border;
+		padding: 15px 20px;
+		text-transform: uppercase;
+		font-size: 14px;
+		transition: all 350ms linear;
+		&:hover{
+			background: $secondaryBlue;
+			color: $white;
+
+		};
+	}
+	}
+}

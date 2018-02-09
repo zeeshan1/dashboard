@@ -1,14 +1,16 @@
 @import "module/_mediaquiries";
 @import "module/_variables";
 @import "module/_mixins";
+@import "module/_switch-btn";
+@import "module/btn";
 @import "module/_header";
 @import "module/_sprite";
-@import "module/_mediaquiries";
+
 @import "module/_footer";
+@import "module/_profile-dropdown";
 @import "module/_dropdown";
 @import "module/_sidebar";
 @import "module/_content-area";
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900");
 
 
@@ -35,6 +37,7 @@ body{
 	font-size: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 *{
 	margin: 0;
@@ -51,3 +54,7 @@ ul, li, ol{
 .hide{
 		display: none !important;
 	}
+
+
+
+

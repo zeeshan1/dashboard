@@ -1,115 +1,209 @@
-.main-sidebar{
-	background: $white;
-	width: $sidebarwidth;
-	height: 100%;
-	float: left;
-	&-nav-inner{
-		padding: 15px 0;
-		& > li.active{
-			background: $grey-border;
-		}
-		li{
-			border-bottom: 1px solid $grey-border;
-			position: relative;
-			&:hover{
-				background: $grey-border;
-				transition: all 300ms linear;
-			}
-			&:last-child{
-				border-bottom: none;
-			}
-			a{
-				text-decoration: none;
-				color: $headertextcolor;
-				padding: 15px;
-				font-size: 14px;
-				display: block;
-				span{
-					margin-right: 10px;
-					display: inline-block;
-					font-size: 18px;
+.main-sidebar {
+    background: $white;    
+    height: 100%;
+     @include shadow(0,0px ,4px, $dropdown-shadow);
+    transition: all 300ms linear; 
+    &-nav-outer{
+        height: calc(100% - 50px);
+        position: relative;
+        overflow: hidden;
+    }
+    &-nav-inner {
+        width: $sidebarwidth;
+        min-width: $sidebarwidth;
+        position: relative;
+        transition: all 300ms linear;
+        height: 100%;
+        overflow: auto;
+        &>li.active {
+            background: $grey-border;
+        }
+        li {
+            border-bottom: 1px solid $grey-border;
+            position: relative;
+            &:hover {
+                background: $grey-border;
+                transition: all 300ms linear;
+                a{
+                	 color: $primaryColor;
+                	 span{
+                        transition: all 300ms cubic-bezier(0.63, 1.17, 0, 1.26);
+                	 }
+                }               
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            a {
+                text-decoration: none;
+                color: $headertextcolor;
+                padding: 20px;
+                font-size: 14px;
+                display: block;
+                white-space: nowrap;
+                span {
+                    margin-right: 20px;
+                    display: inline-block;
+                    font-size: 18px;
+                    transition: all 300ms cubic-bezier(0.63, 1.17, 0, 1.26);
+                }
+            }
+            &.has-child {
+            	&:hover{
+            		&:after{
+            			color: $primaryColor;
+            		}
+            	}
+                &:after {
+                    color: $headertextcolor;
+                    font-family: FontAwesome;
+                    content: "\f104";
+                    position: absolute;
+                    top: 8px;
+                    right: 20px;
+                    transform: translateY(100%);
+                    transition: transform .5s ease
+                }
+                &.active {
+                    &>.has-sub {
+                        color: $primaryColor;
+                        font-weight: 500;
+                    }
+                    &:after {
+                        top: 8px;
+                        right: 20px;
+                        transform: translateY(100%) rotate(-90deg);
+                        color: $primaryColor;
+                    }
+                    .icons {
+                        color: $primaryColor;
+                    }
+                }
+            }
+            & ul {
+                li {
+                    transition: all 300ms cubic-bezier(0, 1.07, 0.34, 0.53);
+                    a {
+                        display: block;
+                        padding-left: $item-padding-M + 20px;
+                    }
+                }
+                &.first-level {
+                    background: lighten($primaryColor, 20%);
+                     li {
+                     	&:hover{
+                     		background: lighten($primaryColor, 25%);
+                     	}
+                        a {
+                            padding-left: ($item-padding-M + 40px);
+                             color: $headertextcolor;
+                        }
+	                    &.has-child.active{ 
+	                    	& > a{
+	                    		 font-weight: 500;
+	                    	}
+	                    	
+	                    }
+                    }
+                }
+                &.second-level {
+                    background: lighten($primaryColor, 30%);
+                    &:hover{
+                    	background: lighten($primaryColor, 35%);
+                    	 a {
+                           color: $headertextcolor;
+                        }
+                    }
+                    li {
+                        a {
+                            padding-left: ($item-padding-M + 60px);
+                             color: $headertextcolor;
+                        }
+                    }
+                }
+                &.third-level {
+                    background: lighten($primaryColor, 45%);
+                }
+                opacity: 0;
+                max-height: 0;
+                height: 0;
+                overflow: hidden;
+                width: 100%;
 
-				}
-								
-			}
-			&.has-child{
-				&:after{
-					color: $headertextcolor;
-					font-family: FontAwesome;
-					content: "\f104";
-					position: absolute;
-					top: 0;
-					right: 20px;
-					transform: translateY(100%);
-				    transition: transform .5s ease
-				}
-				&.active{
-					& > .has-sub{
-						color: $primaryColor;
-						font-weight: 500;
-					}
-					&:after{
-						top: 0;
-						right: 20px;							
-						transform: translateY(100%) rotate(-90deg);
-						color: $primaryColor;
-					}
-					.icons{
-						color: $primaryColor;
-					}
-				}
-			}
-			& ul{
-				&.first-level{
-					background: lighten($primaryColor, 45%);
-				}
-				&.second-level{
-					background: lighten($primaryColor, 50%);
-					li{
-						a{
-							padding-left: ($item-padding-M + 40px);
-						}
-					}
-				}
-				&.third-level{
-					background: lighten($primaryColor, 70%);
-				}
-				opacity: 0;
-				max-height: 0;
-				width: 100%;
-				
-				transition: all 300ms linear;
-				&.show{
-					opacity: 1;
-					max-height: 100%;
-					& > li{
-						transition: all 300ms linear;
-					}				}
-				li{
-					transition: all 300ms linear;
-					a{
-						display: block;
-						padding-left: $item-padding-M + 20px;
-					}
-				}
+                transition: all 300ms linear;
+                &.show {
+                    opacity: 1;
+                    height: 100%;
+                    max-height: 100%;
+                    &>li {
+                        transition: all 300ms linear;
+                    }
+                }
+            }
+        }
+    }
+    &-title-area {
+        transition: all 300ms linear;
+        width: $sidebarwidth;
+        min-width: $sidebarwidth;        
+        background: $primaryColor;
+        height: 50px;
+        @include flex-middle();
+        padding:0 20px;
+        overflow: hidden;
+        &-title {
+            font-size: 18px;
+            color: $white;
+            font-weight: normal;
+            width: 100%;
+            
+            white-space: nowrap;
+            .svg-inline--fa{
+                margin-right: 18px;
+            }
+        }
+    }
 
-			}
-		}
-	}
-	&-title-area{
-			text-align: center;
-			background: $primaryColor;
-			height: 50px;
-			@include flex-middle();
-			&-title{
-				font-size: 22px;
-				color: $white;
-				font-weight: normal;
-				width: 100%;
-				text-align: center;
-
-			}
-		}
-
+}
+ .collapsed{
+        .main-sidebar-title-area {
+        width: $sidebarwidthcollapsed;
+        min-width: $sidebarwidthcollapsed;
+        transition: all 300ms linear;
+        }   	
+    .main-sidebar-nav-outer{
+        overflow: unset;
+        width: $sidebarwidthcollapsed;
+        min-width: $sidebarwidthcollapsed;
+    }
+    .main-sidebar-nav-inner{
+       width: $sidebarwidthcollapsed;
+        min-width: $sidebarwidthcollapsed;        
+        &:hover{
+        position: absolute;
+        width: $sidebarwidth;
+        min-width: $sidebarwidth;
+        background: $white;
+        transition: all 300ms linear;
+        @include shadow(1px, 2px ,4px, $dropdown-shadow);
+         .has-child{            
+            &:after{
+               content: "\f104";
+                }     
+            }
+        }
+        li{                
+            a{
+                white-space: nowrap;
+                overflow: hidden;
+            }           
+        }
+        .has-child{            
+        &:after{
+            content: '';
+            }     
+        }
+    }
+    
 
 }

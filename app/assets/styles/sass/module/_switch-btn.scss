@@ -1,0 +1,57 @@
+$_switchbtnwidth: 40px;
+$_height: 24px;
+$_slidersize: 16px;
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: $_switchbtnwidth;
+  height: $_height;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $switchbtngrey;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: $_slidersize;
+  width: $_slidersize;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: $switchbtngreen;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $switchbtngreen;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX($_slidersize);
+  -ms-transform: translateX($_slidersize);
+  transform: translateX($_slidersize);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: $_height;
+}
+.slider.round:before {
+  border-radius: 50%;
+}

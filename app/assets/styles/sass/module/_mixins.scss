@@ -4,8 +4,13 @@
 @mixin flex-middle(){
 	display: flex;
 	align-items: center;
-
 }
+@mixin flex-middle-center(){
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 @mixin shadow($positionX, $positionY, $size, $color){
 	box-shadow : $positionX $positionY 4px 0px $color;
 }

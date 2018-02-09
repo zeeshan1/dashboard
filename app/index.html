@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="/assets/styles/css/style.css">
-    <link rel="stylesheet" href="/assets/styles/thirdparty-styling/font-awesome.min.css">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <link rel="stylesheet" href="/assets/fonts/style.css">
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js"></script>
-
+   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -26,18 +23,87 @@
         <div class="main-header-nav-section">
             <div class="dropdown dropdown-flags  " id="dropdown-countries" >
                 <a class="dropdown-label"  href="#">
-                    <span class="icon icon--ae"></span>
-                    <div class="dropdown-label-title"> Van Tibolli DWC - LLC
+                    <span class="icon icon--subsid"></span>
+                    <div class="dropdown-label-title"> Subsidiaries
                     </div>
-                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    <span class="arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
-                <div class="dropdown-outer hide">
-                    <ul class="dropdown-arrow_box dropdown-flags " id="dropdown">
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--au"></span> Van Tibooli Beauty PTY Australia</a> </li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--ie"></span>Van Tibolli LTD Ireland</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--it"></span>SVan Tibooli Beauty SRL Italy</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--pr"></span>Tibolli LLC</a></li>
+                <div class="dropdown-outer hide">                    
+                    <ul class="dropdown-arrow_box dropdown-flags  subsidiaries" id="dropdown">
+                        <h2 class="header">Subsidiaries</h2>
+                        <div class="subsidiaries-data">
+                            <li class="subsidiaries-header">
+                            Select Country
+                            <span class="switch-btn">
+                                Select all
+                                <label class="switch">
+                                    <input type="checkbox" id="allSubsidiaries">
+                                    <span class="slider round" for="allSubsidiaries"></span>
+                                </label>
+                            </span>
+                        </li>
+                        <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/ireland.png" alt=""></span> Van Tibooli LTD - Ireland</a>
+                            <label class="switch">
+                                <input type="checkbox" id="ireland">
+                                <span class="slider round" for="ireland"></span>
+                            </label>
+                        </li>
+                        <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/USA.png" alt=""></span>Van Tibolli Corp - USA</a>
+                            <label class="switch">
+                                <input type="checkbox" id="usa">
+                                <span class="slider round" for="usa"></span>
+                            </label>
+                        </li>
+                         <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/australia.png" alt=""></span>Van Tibolli Beauty PTY - Australia</a>
+                            <label class="switch">
+                                <input type="checkbox" id="australia">
+                                <span class="slider round" for="australia"></span>
+                            </label>
+                        </li>
+                         <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/Puerto Rico.png" alt=""></span>Van Tibolli Beauty - Puerto Rico</a>
+                            <label class="switch">
+                                <input type="checkbox" id="puerto">
+                                <span class="slider round" for="puerto"></span>
+                            </label>
+                        </li>
+                         <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/United Arab Emirates.png" alt=""></span>Van Tibolli DWC-LLC</a>
+                            <label class="switch">
+                                <input type="checkbox" id="dwc">
+                                <span class="slider round" for="dwc"></span>
+                            </label>
+                        </li>
+                        <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/Italy.png" alt=""></span>Van Tibolli Beauty SRL - Italy</a>
+                            <label class="switch">
+                                <input type="checkbox" id="italy">
+                                <span class="slider round" for="italy"></span>
+                            </label>
+                        </li>
+                        <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/USA.png" alt=""></span>Van Tibolli Personal</a>
+                            <label class="switch">
+                                <input type="checkbox" id="personal">
+                                <span class="slider round" for="personal"></span>
+                            </label>
+                        </li>
+                         <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/Puerto Rico.png" alt=""></span>Tibolli LLC</a>
+                            <label class="switch">
+                                <input type="checkbox" id="tibolliLlc">
+                                <span class="slider round" for="tibolliLlc"></span>
+                            </label>
+                        </li>
+                        <li class="dropdown-data"><a href="#"><span class="dropdown-data-flag"><img src="assets/images/USA.png" alt=""></span>RC Pro Logistics</a>
+                            <label class="switch">
+                                <input type="checkbox" id="logistics">
+                                <span class="slider round" for="logistics"></span>
+                            </label>
+                        </li>   
+                        </div>  
+                        <div class="btn-container">
+                        <button class="btn btn-default">
+                            Update
+                        </button>
+                    </div>                  
                     </ul>
+                    
                 </div>
             </div>
             <div class="dropdown icon-size " id="dropdownForQuickLinks">
@@ -46,97 +112,139 @@
                 </a>
                 <div class="dropdown-outer hide " >
                     <ul class=" dropdown-arrow_box quick-link-dropdown">
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--admin"></span>Setting</a>
+                        <li class="dropdown-data"><a href="setup.html"><span class="icon icon--admin"></span>Admin</a>
 						 </li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--banking"></span>Profile</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--inventory"></span>Sign Out</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--sales"></span>Sign Out</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--purchase"></span>Sign Out</a></li>
-                        <li class="dropdown-data"><a href="#"><span class="icon icon--sales"></span>Sign Out</a></li>
+                        <li class="dropdown-data"><a href="banking.html"><span class="icon icon--banking"></span>Banking</a></li>
+                        <li class="dropdown-data"><a href="inventory.html"><span class="icon icon--inventory"></span>inventory</a></li>
+                        <li class="dropdown-data"><a href="sale.html"><span class="icon icon--sales"></span>Sales</a></li>
+                        <li class="dropdown-data"><a href="purchase.html"><span class="icon icon--purchase"></span>purchase</a></li>
+                        <li class="dropdown-data"><a href="setup.html"><span class="icon icon--sales"></span>Setup</a></li>
                     </ul>
                 </div>
             </div>
             <div class="dropdown " id="dropdownForSetting">
                 <a class="dropdown-label" href="#">
-                    <span class="dropdown-label-avatar"> <i class="fa fa-user-o" aria-hidden="true"></i></span>
+                    <span class="dropdown-label-avatar"> <i class="far fa-user"></i></span>
                     <div class="dropdown-label-title">Developer Logged-in</div>
-                    <span><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                    <span class="arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </a>
                 <div class="dropdown-outer hide">
-                    <ul class="dropdown-arrow_box " id="dropdown">
-                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-cog" aria-hidden="true"></i></span>Setting</a> </li>
-                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>Profile</a></li>
-                        <li class="dropdown-data"><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span>Sign Out</a></li>
-                    </ul>
+                   <div class="profile-section dropdown-arrow_box profile" id="dropdown">
+                       <div class="profile-section-avatar">
+                           <span class="icon icon--profile-avatar">                               
+                           </span>
+                            <div class="profile-section-avatar-name">
+                                Cris Du
+                            </div>
+                       </div>                     
+                       
+                            <ul class="profile-section-nav">
+                               <li>
+                                   <a href="#">
+                                        <span class="icon icon--dashboard"></span>
+                                        <p class="title">
+                                            Dashboard
+                                        </p>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                        <span class="icon icon--profile"></span>
+                                        <p class="title">
+                                            Profile
+                                        </p>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                        <span class="icon icon--edu"></span>
+                                        <p class="title">
+                                            Education Portal
+                                        </p>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                        <span class="icon icon--wishlist"></span>
+                                        <p class="title">
+                                            Wishlist
+                                        </p>
+                                   </a>
+                               </li>
+                            </ul>
+                       
+                        <div class="profile-section-signout">
+                            Sign Out
+                        </div>
+                   </div>
+
+
                 </div>
             </div>
         </div>
     </header>
 	
 	<section class="content-wrapper">
-		<aside class="main-sidebar">
+		<aside class="main-sidebar collapsed" id="sideBar">
 			<div class="main-sidebar-title-area">
-				<h2 class="main-sidebar-title-area-title">					
-				Inventory Section
+				<h2 class="main-sidebar-title-area-title" id='navTitle'>			
+                   <i class="fas fa-align-justify"></i> Inventory Module
 				</h2>
+                
 			</div>
-		<nav class="main-sidebar-nav-outer">
-			<ul class="main-sidebar-nav-inner">
-				<li class="has-child" id="first">
-					<a href="#" class="has-sub" ><span class=" icons icon-items "></span>First level Element</a>
-					<ul class="first-level">
-						<li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
-							<ul class="second-level">
-								<li >
-									<a href="#">Third Level Element</a>
-										
-								</li>
-								<li><a href="#">child is here</a></li>
-								<li><a href="#">you are child</a></li>
-							</ul>
+		<nav class="main-sidebar-nav-outer ">    
+            <ul class="main-sidebar-nav-inner">
+                <li class="has-child" id="first">
+                    <a href="#" class="has-sub" ><span class=" icons icon-items "></span>First level Element</a>
+                    <ul class="first-level">
+                        <li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
+                            <ul class="second-level">
+                                <li >
+                                    <a href="#">Third Level Element</a>
+                                        
+                                </li>
+                                <li><a href="#">child is here</a></li>
+                                <li><a href="#">you are child</a></li>
+                            </ul>
 
-						</li>
-						<li><a href="#">child is here</a></li>
-						<li><a href="#">you are child</a></li>
-					</ul>
+                        </li>
+                        <li><a href="#">child is here</a></li>
+                        <li><a href="#">you are child</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class=" icons icon-wherehouse"></span>This is testing</a></li>
+                <li><a href="#"><span class=" icons icon-transfrer-order"></span>This is testing</a></li>
+                <li><a href="#"><span class=" icons icon-iventory-adjustment"></span>This is testing</a></li>
+                <li class="has-child"><a href="#" class="has-sub"><span class=" icons icon-purchase"></span>This is testing</a>
 
+                    <ul class="first-level">
+                        <li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
+                            <ul class="second-level">
+                                <li >
+                                    <a href="#">Third Level Element</a>
+                                        
+                                </li>
+                                <li><a href="#">child is here</a></li>
+                                <li><a href="#">you are child</a></li>
+                            </ul>
 
-				</li>
-				<li><a href="#"><span class=" icons icon-wherehouse"></span>This is testing</a></li>
-				<li><a href="#"><span class=" icons icon-transfrer-order"></span>This is testing</a></li>
-				<li><a href="#"><span class=" icons icon-iventory-adjustment"></span>This is testing</a></li>
-				<li class="has-child"><a href="#" class="has-sub"><span class=" icons icon-purchase"></span>This is testing</a>
-
-					<ul class="first-level">
-						<li class="has-child" id="second"><a href="#" class="has-sub">Second Level Element</a>
-							<ul class="second-level">
-								<li >
-									<a href="#">Third Level Element</a>
-										
-								</li>
-								<li><a href="#">child is here</a></li>
-								<li><a href="#">you are child</a></li>
-							</ul>
-
-						</li>
-						<li><a href="#">child is here</a></li>
-						<li><a href="#">you are child</a></li>
-					</ul>
-
-
-
+                        </li>
+                        <li><a href="#">child is here</a></li>
+                        <li><a href="#">you are child</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span class=" icons icon-setup"></span>This is testing</a></li>
+            </ul>
 
 
-				</li>
-				<li><a href="#"><span class=" icons icon-setup"></span>This is testing</a></li>
-			</ul>
 		</nav>
 	</aside>
-	<section class="content-area">
+	<section class="content-area collapsedWidth" id="contenttArea">
 		
 		<div class="content-header">
 			<span id="sidebartoggler" class="content-header-toggler">
 				<i class="fa fa-outdent" aria-hidden="true"></i>
+                <i class="fa fa-indent" aria-hidden="true"></i>
 			</span>
 			<h3 class="content-header-title">
 				Dashboard
@@ -152,9 +260,13 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./assets/scripts/custom.js">
-    </script>
+<!--     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+
+<script src="./assets/scripts/jquery.min.js"></script>
+    <script src="./assets/scripts/custom.js"></script>
+
+
+
 </body>
 
 </html>
