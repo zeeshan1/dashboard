@@ -1,8 +1,6 @@
 
 let dropdown = function() {
 	'use strict';
-	
-
 
 	$('.dropdown').click(function(e){
 		if($(this).children().hasClass("dropdown-outer")){
@@ -17,9 +15,8 @@ let dropdown = function() {
 			$(this).find(".dropdown-outer").toggleClass('hide');
 			
 		}
-		TweenMax.staggerFrom(".dropdown-outer", .15, {scaleY:.2,opacity:0, delay:0.02, ease:Back.easeOut, force3D:true});
-		TweenMax.staggerTo(".dropdown-outer", 0.15, {opacity:0, ease:Back.easeOut});
-		
+		TweenMax.staggerFrom(".dropdown-outer", .15, {scaleY:.1,opacity:0, delay:0.02, ease:Back.easeOut, force3D:true});
+		TweenMax.staggerTo(".dropdown-outer", 0.15, {scaleY:.1, opacity:0, ease:Back.easeOut});		
 
 	});
 
@@ -43,8 +40,7 @@ $('.dropdown-flags').click(function(event){
 })
 $('#allSubsidiaries')
 
-var sideBar = function(){
-	
+var sideBar = function(){	
 	$('li.has-child > a').click(function(e){
 		if($(this).hasClass('has-sub')){
 			$(this).parent().toggleClass('active');
@@ -66,17 +62,14 @@ var sideBar = function(){
 		$('li.has-child > a').parent().children('ul').removeClass('show');	
 
 	});
-
-
+		$('.main-sidebar-nav-inner').on('mouseleave', function(){
+		if($('#sideBar').hasClass('collapsed')){
+				$('li.has-child > a').parent().children('ul').removeClass('show');
+				$('li.has-child > a').parent().removeClass('active');
+				}
+			})
+		
 	
-	function shortTitle(){
-		var sideBarTitle = document.getElementById('navTitle'),
-			getWords = sideBarTitle.textContent.split(' ');
-			for(var i= 0; i<getWords.length; i++){
-				sideBarTitle.textContent = getWords[i].substr(2, 1);
-			}
-
-	}
 
 }();
 
