@@ -1,5 +1,5 @@
-# Sass-Starter-project
-SASS Starter project
+# GKhair
+GKhair Dashboard
 
 ### Version
 1.0.0
